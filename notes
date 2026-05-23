@@ -1,0 +1,37 @@
+Endpoint:- for every request a route is regitered thats called an endpoint.
+
+Route:- HTTP method + URL, ex:- GET /api/health
+meaning: When someone sends a GET request to /api/health, execute this code.
+
+Axios:- is a JavaScript library used to make HTTP requests to a backend API. Since React does not provide a special API client for talking to a backend. Automatic JSON handling, Request interceptors, Response interceptors, Easier error handling, Request cancellation, Automatic timeout configuration. 
+React builds the interface. Axios is the messenger that carries data between the React frontend and the Express backend.
+
+MongoDB:- database is a large container, collection is a folder which saves files, document is a file.
+
+
+Note
+1. The browser, a form, or React creates a request containing both a method and a path. Express receives both, looks for a route with the same method and path, executes its callback, and sends a response back.
+
+Why 
+server.js exists:- 
+Responsibility: Start the application.
+
+app.js exists:-
+Responsibility: Configure Express application.
+
+mongoose:-
+MongoDB speaks MongoDB. Node.js speaks JavaScript.Mongoose is translator between them.
+
+
+server.js
+    │
+    ▼
+imports app.js
+    │
+    ▼
+starts Express application
+
+
+
+Request and Response:- information comting and going back from server
+
