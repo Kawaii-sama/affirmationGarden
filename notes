@@ -8,19 +8,34 @@ React builds the interface. Axios is the messenger that carries data between the
 
 MongoDB:- database is a large container, collection is a folder which saves files, document is a file.
 
+Schema:- What fields exist?, What type are they? , What rules apply? (blueprint)
+
+Model:- Model lets us interact with MongoDB. (Construction company using the blueprint)
+
 
 Note
 1. The browser, a form, or React creates a request containing both a method and a path. Express receives both, looks for a route with the same method and path, executes its callback, and sends a response back.
 
 Why 
-server.js exists:- 
+
+1. mongoose:-
+MongoDB speaks MongoDB. Node.js speaks JavaScript.Mongoose is translator between them.
+
+2. dotenv:- it loads content of .env into process.env
+
+Separation of concerns:-
+1. server.js exists:- 
 Responsibility: Start the application.
 
-app.js exists:-
+2. app.js exists:-
 Responsibility: Configure Express application.
 
-mongoose:-
-MongoDB speaks MongoDB. Node.js speaks JavaScript.Mongoose is translator between them.
+
+3. db.js:- Connects database
+
+authRoutes.js: Defining API endpoints (POST /register)
+authController.js: Registration logic, Login logic, Validation logic
+User.js: User schema, User model, Database interaction
 
 
 server.js
@@ -34,4 +49,6 @@ starts Express application
 
 
 Request and Response:- information comting and going back from server
+
+jwt.sign(...) :- generates a digitally signed token.
 
