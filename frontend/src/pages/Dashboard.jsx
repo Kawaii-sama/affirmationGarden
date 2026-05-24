@@ -45,6 +45,11 @@ function Dashboard() {
         </div>
       </div>
 
+      <button onClick={() => navigate("/reflection")}>
+        Add Today's Reflection 🌿
+      </button>
+      
+
       <button onClick={() => {
         localStorage.removeItem("token")
         localStorage.removeItem("user")

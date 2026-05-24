@@ -54,6 +54,14 @@ b. If no user is found, it redirects to login — this is a basic protected rout
 c. If user is found, it displays their name, streak, completed days and garden stage
 d. The logout button clears localStorage and sends them back to login
 
+11. frontend/src/api/affirmations.js:- This is just a plain JavaScript object. No database needed. Each key is a category name, and each value is an array of affirmations for that category.
+
+12. frontend/src/pages/Reflection.jsx:- a. Step 1 shows a dropdown of categories
+b. Step 2 only appears after a category is chosen
+c. The affirmation list changes based on which category was picked
+d. Custom category and custom affirmation both show a text input when selected
+e. On submit we send everything to POST /api/reflections with the JWT token in the header
+
 
 
 
