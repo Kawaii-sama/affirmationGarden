@@ -62,6 +62,10 @@ c. The affirmation list changes based on which category was picked
 d. Custom category and custom affirmation both show a text input when selected
 e. On submit we send everything to POST /api/reflections with the JWT token in the header
 
+13. backend/src/routes/reflectionRoutes.js:- Notice protect is sitting between the path and the controller. This means every request to this route must pass through the auth middleware first before reaching submitReflection.
+
+
+
 
 
 

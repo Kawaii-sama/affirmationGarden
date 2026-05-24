@@ -45,6 +45,9 @@ function Reflection() {
         { headers: { Authorization: `Bearer ${token}` } }
       )
 
+      // Update localStorage with fresh user data
+      localStorage.setItem("user", JSON.stringify(response.data.user))
+
       // Go back to dashboard after saving
       navigate("/dashboard")
 
