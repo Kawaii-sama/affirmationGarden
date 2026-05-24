@@ -1,33 +1,34 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import Garden from "../components/Garden"
 
 function Dashboard() {
-  const [user, setUser]     = useState(null)
-  const navigate            = useNavigate()
+  const [user, setUser]   = useState(null)
+  const navigate          = useNavigate()
 
   useEffect(() => {
-    // When dashboard loads, check if user is logged in
     const savedUser = localStorage.getItem("user")
 
     if (!savedUser) {
-      // If no user found, send them back to login
       navigate("/")
       return
     }
 
-    // If user found, save it to state
     setUser(JSON.parse(savedUser))
   }, [])
 
-  // Show nothing while checking
   if (!user) return null
 
   return (
     <div>
       <h1>Welcome back, {user.name} 🌱</h1>
 
+      {/* Garden visualization */}
+      <Garden gardenStage={user.gardenStage} />
+
+      {/* Stats */}
       <div>
-        <h2>Your Garden Progress</h2>
+        <h2>Your Progress</h2>
 
         <div>
           <p>🔥 Streak</p>
@@ -36,19 +37,19 @@ function Dashboard() {
 
         <div>
           <p>✅ Completed Days</p>
-          <p>{user.completedDays} days</p>
+          <p>{user.completedDays}</p>
         </div>
 
         <div>
           <p>🌿 Garden Stage</p>
-          <p>{user.gardenStage}</p>
+          <p>Stage {user.gardenStage}</p>
         </div>
       </div>
 
+      {/* Buttons */}
       <button onClick={() => navigate("/reflection")}>
         Add Today's Reflection 🌿
       </button>
-      
 
       <button onClick={() => {
         localStorage.removeItem("token")
@@ -57,6 +58,7 @@ function Dashboard() {
       }}>
         Logout
       </button>
+
     </div>
   )
 }

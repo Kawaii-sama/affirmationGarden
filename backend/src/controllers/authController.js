@@ -92,16 +92,18 @@ const loginUser = async (req, res) => {
     );
 
     res.status(200).json({
-     success: true,
-     message: "Login successful",
-     token,
-     user: {
+    success: true,
+    message: "Login successful",
+    token,
+    user: {
       _id: user._id,
       name: user.name,
-      email: user.email
-    }
+      email: user.email,
+      streak: user.streak,
+      completedDays: user.completedDays,
+      gardenStage: user.gardenStage
+      }
     });
-
     
 
   } catch (error) {
