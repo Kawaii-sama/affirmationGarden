@@ -39,16 +39,36 @@ const submitReflection = async (req, res) => {
       affirmation
     });
 
-    // Update user's completedDays and gardenStage
-    const user = await User.findByIdAndUpdate(
+    // --- Streak calculation ---
+    const user = await User.findById(req.userId);
+
+    // Get yesterday's date range
+    const startOfYesterday = new Date();
+    startOfYesterday.setDate(startOfYesterday.getDate() - 1);
+    startOfYesterday.setHours(0, 0, 0, 0);
+
+    const endOfYesterday = new Date();
+    endOfYesterday.setDate(endOfYesterday.getDate() - 1);
+    endOfYesterday.setHours(23, 59, 59, 999);
+
+    // Check if user submitted a reflection yesterday
+    const yesterdayReflection = await Reflection.findOne({
+      user: req.userId,
+      createdAt: { $gte: startOfYesterday, $lte: endOfYesterday }
+    });
+
+    // If they did yesterday, continue the streak
+    // If they didn't, reset streak to 1
+    const newStreak = yesterdayReflection ? user.streak + 1 : 1;
+
+    // Update user stats
+    const updatedUser = await User.findByIdAndUpdate(
       req.userId,
       {
-        $inc: {
-          completedDays: 1,
-          gardenStage: 1
-        }
+        $inc: { completedDays: 1, gardenStage: 1 },
+        streak: newStreak
       },
-      { new: true }  // returns the updated user
+      { new: true }
     );
 
     res.status(201).json({
@@ -56,12 +76,12 @@ const submitReflection = async (req, res) => {
       message: "Reflection saved 🌱",
       reflection,
       user: {
-        _id: user._id,
-        name: user.name,
-        email: user.email,
-        streak: user.streak,
-        completedDays: user.completedDays,
-        gardenStage: user.gardenStage
+        _id: updatedUser._id,
+        name: updatedUser.name,
+        email: updatedUser.email,
+        streak: updatedUser.streak,
+        completedDays: updatedUser.completedDays,
+        gardenStage: updatedUser.gardenStage
       }
     });
 
