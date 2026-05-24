@@ -37,6 +37,16 @@ Responsibility: Configure Express application.
 
 3. db.js:- Connects database
 
+4. frontend/src/main.jsx:- This is the entry point of your entire React app. It finds the <div id="root"> in your index.html and mounts your app inside it.
+
+5. frontend/src/App.jsx:- This file is your map of pages. It says: when the URL is /, show Login. When it's /register, show Register. And so on. We'll add more routes later as we build more pages.
+
+6. frontend/.env:- This tells your React app where your backend lives. Later when we deploy, we'll change this to the live backend URL.
+
+7. frontend/src/api/axios.js:- Think of this like saving a contact in your phone. Instead of dialing the full number every time, you just call "Backend" and it knows where to go. Every API call we make from now on will use this API object instead of typing http://localhost:5000/api every single time.
+
+8. frontend/src/pages/Register.jsx:- useState holds the value of each input field as the user types
+
 authRoutes.js: Defining API endpoints (POST /register)
 authController.js: Registration logic, Login logic, Validation logic
 User.js: User schema, User model, Database interaction
