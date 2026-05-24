@@ -47,6 +47,16 @@ Responsibility: Configure Express application.
 
 8. frontend/src/pages/Register.jsx:- useState holds the value of each input field as the user types
 
+9. frontend/src/pages/Login.jsx:- useNavigate — after login we redirect the user to /dashboard automatically, localStorage — we save the token in the browser so the user stays logged in even after refreshing the page
+
+10. frontend/src/pages/Dashboard.jsx:- a. When the page loads, useEffect checks localStorage for a saved user
+b. If no user is found, it redirects to login — this is a basic protected route
+c. If user is found, it displays their name, streak, completed days and garden stage
+d. The logout button clears localStorage and sends them back to login
+
+
+
+
 authRoutes.js: Defining API endpoints (POST /register)
 authController.js: Registration logic, Login logic, Validation logic
 User.js: User schema, User model, Database interaction
