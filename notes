@@ -23,6 +23,10 @@ MongoDB speaks MongoDB. Node.js speaks JavaScript.Mongoose is translator between
 
 2. dotenv:- it loads content of .env into process.env
 
+3. react-router-domLets :- lrts you have multiple pages like /login, /dashboard
+
+4. axios:- Makes API calls to your backend (cleaner than fetch)
+
 Separation of concerns:-
 1. server.js exists:- 
 Responsibility: Start the application.
