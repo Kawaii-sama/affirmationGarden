@@ -2,24 +2,59 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import affirmations from "../api/affirmations"
 import API from "../api/axios"
+import CategoryDropdown from "../components/CategoryDropdown"
+import { sharedAudioCtx } from "../main.jsx"
 
 function Reflection() {
-  const [category, setCategory]               = useState("")
-  const [customCategory, setCustomCategory]   = useState("")
-  const [affirmation, setAffirmation]         = useState("")
+  const [category, setCategory] = useState("")
+  const [customCategory, setCustomCategory] = useState("")
+  const [affirmation, setAffirmation] = useState("")
   const [customAffirmation, setCustomAffirmation] = useState("")
-  const [error, setError]                     = useState("")
+  const [error, setError] = useState("")
 
   const navigate = useNavigate()
 
   const categories = Object.keys(affirmations)
   const currentAffirmations = affirmations[category] || []
 
+  const playHoverSound = () => {
+    const ctx = sharedAudioCtx
+
+    if (ctx.state === "suspended") return
+
+    const osc = ctx.createOscillator()
+    const gain = ctx.createGain()
+
+    osc.connect(gain)
+    gain.connect(ctx.destination)
+
+    osc.type = "sine"
+    osc.frequency.setValueAtTime(600, ctx.currentTime)
+    osc.frequency.exponentialRampToValueAtTime(
+      500,
+      ctx.currentTime + 0.04
+    )
+
+    gain.gain.setValueAtTime(0.08, ctx.currentTime)
+    gain.gain.exponentialRampToValueAtTime(
+      0.001,
+      ctx.currentTime + 0.04
+    )
+
+    osc.start(ctx.currentTime)
+    osc.stop(ctx.currentTime + 0.04)
+  }
+
   const handleSubmit = async () => {
     setError("")
 
-    const finalCategory    = category === "Custom" ? customCategory : category
-    const finalAffirmation = affirmation === "custom" ? customAffirmation : affirmation
+    const finalCategory =
+      category === "Custom" ? customCategory : category
+
+    const finalAffirmation =
+      affirmation === "custom"
+        ? customAffirmation
+        : affirmation
 
     if (!finalCategory) {
       setError("Please select or enter a category")
@@ -36,15 +71,28 @@ function Reflection() {
 
       const response = await API.post(
         "/reflections",
-        { category: finalCategory, affirmation: finalAffirmation },
-        { headers: { Authorization: `Bearer ${token}` } }
+        {
+          category: finalCategory,
+          affirmation: finalAffirmation
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        }
       )
 
-      localStorage.setItem("user", JSON.stringify(response.data.user))
-      navigate("/dashboard")
+      localStorage.setItem(
+        "user",
+        JSON.stringify(response.data.user)
+      )
 
+      navigate("/dashboard")
     } catch (err) {
-      setError(err.response?.data?.message || "Something went wrong")
+      setError(
+        err.response?.data?.message ||
+          "Something went wrong"
+      )
     }
   }
 
@@ -62,12 +110,15 @@ function Reflection() {
       <h1 className="text-4xl text-[#5c4a3a] mb-2">
         Today's Reflection
       </h1>
+
       <p className="text-[#9c8572] mb-8">
         Take a moment. Breathe. Choose your intention.
       </p>
 
       {error && (
-        <p className="text-red-400 text-sm mb-4">{error}</p>
+        <p className="text-red-400 text-sm mb-4">
+          {error}
+        </p>
       )}
 
       {/* Step 1 — Category */}
@@ -76,26 +127,22 @@ function Reflection() {
           Step 1 — Choose a category
         </h2>
 
-        <select
+        <CategoryDropdown
+          categories={categories}
           value={category}
-          onChange={(e) => {
-            setCategory(e.target.value)
+          onChange={(val) => {
+            setCategory(val)
             setAffirmation("")
           }}
-          className="w-full border border-[#e0d8d0] rounded-2xl px-4 py-3 text-[#5c4a3a] focus:outline-none focus:border-[#7c9a6e] bg-[#faf8f5]"
-        >
-          <option value="">-- Select a category --</option>
-          {categories.map((cat) => (
-            <option key={cat} value={cat}>{cat}</option>
-          ))}
-          <option value="Custom">Custom (write your own)</option>
-        </select>
+        />
 
         {category === "Custom" && (
           <input
             type="text"
             value={customCategory}
-            onChange={(e) => setCustomCategory(e.target.value)}
+            onChange={(e) =>
+              setCustomCategory(e.target.value)
+            }
             placeholder="Name your category..."
             className="w-full mt-3 border border-[#e0d8d0] rounded-2xl px-4 py-3 text-[#5c4a3a] focus:outline-none focus:border-[#7c9a6e] bg-[#faf8f5]"
           />
@@ -110,29 +157,37 @@ function Reflection() {
           </h2>
 
           <div className="space-y-3">
-            {category !== "Custom" && currentAffirmations.map((aff) => (
-              <label
-                key={aff}
-                className={`flex items-center gap-3 p-4 rounded-2xl border cursor-pointer transition-colors ${
-                  affirmation === aff
-                    ? "border-[#7c9a6e] bg-[#f0f7ec]"
-                    : "border-[#e0d8d0] bg-[#faf8f5]"
-                }`}
-              >
-                <input
-                  type="radio"
-                  name="affirmation"
-                  value={aff}
-                  checked={affirmation === aff}
-                  onChange={(e) => setAffirmation(e.target.value)}
-                  className="accent-[#7c9a6e]"
-                />
-                <span className="text-[#5c4a3a]">{aff}</span>
-              </label>
-            ))}
+            {category !== "Custom" &&
+              currentAffirmations.map((aff) => (
+                <label
+                  key={aff}
+                  onMouseEnter={playHoverSound}
+                  className={`flex items-center gap-3 p-4 rounded-2xl border cursor-pointer transition-colors ${
+                    affirmation === aff
+                      ? "border-[#7c9a6e] bg-[#f0f7ec]"
+                      : "border-[#e0d8d0] bg-[#faf8f5]"
+                  }`}
+                >
+                  <input
+                    type="radio"
+                    name="affirmation"
+                    value={aff}
+                    checked={affirmation === aff}
+                    onChange={(e) =>
+                      setAffirmation(e.target.value)
+                    }
+                    className="accent-[#7c9a6e]"
+                  />
+
+                  <span className="text-[#5c4a3a]">
+                    {aff}
+                  </span>
+                </label>
+              ))}
 
             {/* Write your own option */}
             <label
+              onMouseEnter={playHoverSound}
               className={`flex items-center gap-3 p-4 rounded-2xl border cursor-pointer transition-colors ${
                 affirmation === "custom"
                   ? "border-[#7c9a6e] bg-[#f0f7ec]"
@@ -144,10 +199,15 @@ function Reflection() {
                 name="affirmation"
                 value="custom"
                 checked={affirmation === "custom"}
-                onChange={(e) => setAffirmation(e.target.value)}
+                onChange={(e) =>
+                  setAffirmation(e.target.value)
+                }
                 className="accent-[#7c9a6e]"
               />
-              <span className="text-[#9c8572] italic">Write your own...</span>
+
+              <span className="text-[#9c8572] italic">
+                Write your own...
+              </span>
             </label>
           </div>
 
@@ -155,7 +215,9 @@ function Reflection() {
             <input
               type="text"
               value={customAffirmation}
-              onChange={(e) => setCustomAffirmation(e.target.value)}
+              onChange={(e) =>
+                setCustomAffirmation(e.target.value)
+              }
               placeholder="Write your affirmation..."
               className="w-full mt-3 border border-[#e0d8d0] rounded-2xl px-4 py-3 text-[#5c4a3a] focus:outline-none focus:border-[#7c9a6e] bg-[#faf8f5]"
             />
