@@ -28,27 +28,29 @@ document.addEventListener("click", (e) => {
     }
   )
 
- // UI click sound
+ // Glittery fairy button sound
   const ctx = new AudioContext()
+  const notes = [1047, 1319, 1568]  // higher notes — tiny sparkle
 
-  const osc = ctx.createOscillator()
-  const gainNode = ctx.createGain()
+  notes.forEach((freq, i) => {
+    const osc = ctx.createOscillator()
+    const gain = ctx.createGain()
 
-  osc.connect(gainNode)
-  gainNode.connect(ctx.destination)
+    osc.connect(gain)
+    gain.connect(ctx.destination)
 
-  osc.type = "sine"
+    osc.type = "sine"
+    osc.frequency.setValueAtTime(freq, ctx.currentTime + i * 0.05)
 
-  // High to low pitch sweep
-  osc.frequency.setValueAtTime(1200, ctx.currentTime)
-  osc.frequency.exponentialRampToValueAtTime(600, ctx.currentTime + 0.08)
+    gain.gain.setValueAtTime(0, ctx.currentTime + i * 0.05)
+    gain.gain.linearRampToValueAtTime(0.12, ctx.currentTime + i * 0.05 + 0.01)
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + i * 0.05 + 0.15)
 
-  // Quick fade out
-  gainNode.gain.setValueAtTime(0.4, ctx.currentTime)
-  gainNode.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.08)
+    osc.start(ctx.currentTime + i * 0.05)
+    osc.stop(ctx.currentTime + i * 0.05 + 0.15)
+  })
 
-  osc.start(ctx.currentTime)
-  osc.stop(ctx.currentTime + 0.08)
+
 
 
 })
