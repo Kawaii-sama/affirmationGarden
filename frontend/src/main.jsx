@@ -129,3 +129,47 @@ document.addEventListener("mousedown", (e) => {
 
   playHoverSound();
 });
+
+
+document.addEventListener("keydown", (e) => {
+  const isTypingField = e.target.matches(
+    "input, textarea"
+  )
+
+  if (!isTypingField) return
+
+  const ctx = sharedAudioCtx
+
+  if (ctx.state === "suspended") return
+
+  const osc = ctx.createOscillator()
+  const gain = ctx.createGain()
+
+  osc.connect(gain)
+  gain.connect(ctx.destination)
+
+  osc.type = "triangle"
+
+  osc.frequency.setValueAtTime(
+    1200,
+    ctx.currentTime
+  )
+
+  osc.frequency.exponentialRampToValueAtTime(
+    900,
+    ctx.currentTime + 0.03
+  )
+
+  gain.gain.setValueAtTime(
+    0.03,
+    ctx.currentTime
+  )
+
+  gain.gain.exponentialRampToValueAtTime(
+    0.001,
+    ctx.currentTime + 0.03
+  )
+
+  osc.start(ctx.currentTime)
+  osc.stop(ctx.currentTime + 0.03)
+});
