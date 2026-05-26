@@ -5,6 +5,7 @@ import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Dashboard from "./pages/Dashboard"
 import Reflection from "./pages/Reflection"
+import FairyCursor from "./components/FairyCursor"
 
 function SoundOnTransition() {
   const location = useLocation()
@@ -35,10 +36,14 @@ function SoundOnTransition() {
   return null
 }
 
+
+
+
 function App() {
   return (
     <BrowserRouter>
       <SoundOnTransition />
+      <FairyCursor />
       <Routes>
         <Route path="/"           element={<Login />} />
         <Route path="/register"   element={<Register />} />
