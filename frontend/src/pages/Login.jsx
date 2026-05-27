@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import API from "../api/axios"
+import EnchantedBackground from "../components/EnchantedBackground"
 
 function Login() {
   const [email, setEmail]       = useState("")
@@ -29,70 +30,93 @@ function Login() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f9f6f0] flex items-center justify-center px-6">
-      <div className="w-full max-w-md">
+    <>
+      <EnchantedBackground />
+      <div className="min-h-screen flex items-center justify-center px-6" style={{ position: "relative", zIndex: 1 }}>
+        <div className="w-full max-w-md">
 
-        <div className="text-center mb-10">
-          <p className="text-5xl mb-4">🌸</p>
-          <h1 className="text-4xl text-[#5c4a3a] mb-2">
-            Affirmation Garden
-          </h1>
-          <p className="text-[#9c8572]">
-            Welcome back, your garden missed you.
-          </p>
-        </div>
+          <div className="text-center mb-10">
+            <p className="text-5xl mb-4">🌸</p>
+            <h1 className="text-4xl mb-2" style={{ color: "#e8dcc8" }}>
+              Affirmation Garden
+            </h1>
+            <p style={{ color: "#b8a892" }}>
+              Welcome back, your garden missed you.
+            </p>
+          </div>
 
-        <div className="bg-white rounded-3xl p-8 shadow-sm">
+          <div style={{
+            background: "rgba(255, 255, 255, 0.08)",
+            backdropFilter: "blur(12px)",
+            WebkitBackdropFilter: "blur(12px)",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+          }} className="rounded-3xl p-8">
 
-          {error && (
-            <p className="text-red-400 text-sm mb-4 text-center">{error}</p>
-          )}
+            {error && (
+              <p className="text-red-400 text-sm mb-4 text-center">{error}</p>
+            )}
 
-          <form onSubmit={handleSubmit}>
-            <div className="mb-5">
-              <label className="block text-sm text-[#9c8572] mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
-                className="w-full border border-[#e0d8d0] rounded-2xl px-4 py-3 text-[#5c4a3a] focus:outline-none focus:border-[#7c9a6e] bg-[#faf8f5]"
-              />
-            </div>
+            <form onSubmit={handleSubmit}>
+              <div className="mb-5">
+                <label className="block text-sm mb-2" style={{ color: "#b8a892" }}>
+                  Email
+                </label>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="your@email.com"
+                  className="w-full rounded-2xl px-4 py-3 focus:outline-none"
+                  style={{
+                    background: "rgba(255, 255, 255, 0.06)",
+                    border: "1px solid rgba(255, 255, 255, 0.12)",
+                    color: "#e8dcc8",
+                  }}
+                />
+              </div>
 
-            <div className="mb-6">
-              <label className="block text-sm text-[#9c8572] mb-2">
-                Password
-              </label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••"
-                className="w-full border border-[#e0d8d0] rounded-2xl px-4 py-3 text-[#5c4a3a] focus:outline-none focus:border-[#7c9a6e] bg-[#faf8f5]"
-              />
-            </div>
+              <div className="mb-6">
+                <label className="block text-sm mb-2" style={{ color: "#b8a892" }}>
+                  Password
+                </label>
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="••••••••"
+                  className="w-full rounded-2xl px-4 py-3 focus:outline-none"
+                  style={{
+                    background: "rgba(255, 255, 255, 0.06)",
+                    border: "1px solid rgba(255, 255, 255, 0.12)",
+                    color: "#e8dcc8",
+                  }}
+                />
+              </div>
 
-            <button
-              type="submit"
-              className="w-full bg-[#7c9a6e] hover:bg-[#6a8860] text-white py-3 rounded-2xl text-lg transition-colors"
-            >
-              Enter my garden 🌿
-            </button>
-          </form>
+              <button
+                type="submit"
+                className="w-full py-3 rounded-2xl text-lg transition-all hover:scale-[1.02]"
+                style={{
+                  background: "rgba(124, 154, 110, 0.6)",
+                  border: "1px solid rgba(124, 154, 110, 0.3)",
+                  color: "#e8f0e0",
+                }}
+              >
+                Enter my garden 🌿
+              </button>
+            </form>
 
-          <p className="text-center text-sm text-[#9c8572] mt-6">
-            New here?{" "}
-            <a href="/register" className="text-[#7c9a6e] underline">
-              Create an account
-            </a>
-          </p>
+            <p className="text-center text-sm mt-6" style={{ color: "#b8a892" }}>
+              New here?{" "}
+              <a href="/register" style={{ color: "#a0c090" }} className="underline">
+                Create an account
+              </a>
+            </p>
 
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
