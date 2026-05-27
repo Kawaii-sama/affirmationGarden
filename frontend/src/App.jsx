@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"
 import { useEffect } from "react"
+import { startGlobalFlute } from "./utils/audioManager"
 
 import Login from "./pages/Login"
 import Register from "./pages/Register"
@@ -40,6 +41,21 @@ function SoundOnTransition() {
 
 
 function App() {
+  useEffect(() => {
+    const handleInteraction = () => {
+      startGlobalFlute()
+      document.removeEventListener("click", handleInteraction)
+      document.removeEventListener("touchstart", handleInteraction)
+    }
+    document.addEventListener("click", handleInteraction)
+    document.addEventListener("touchstart", handleInteraction)
+
+    return () => {
+      document.removeEventListener("click", handleInteraction)
+      document.removeEventListener("touchstart", handleInteraction)
+    }
+  }, [])
+  
   return (
     <BrowserRouter>
       <SoundOnTransition />

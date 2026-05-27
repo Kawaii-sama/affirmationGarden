@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import API from "../api/axios"
 import EnchantedBackground from "../components/EnchantedBackground"
 
@@ -108,9 +108,9 @@ function Login() {
 
             <p className="text-center text-sm mt-6" style={{ color: "#b8a892" }}>
               New here?{" "}
-              <a href="/register" style={{ color: "#a0c090" }} className="underline">
-                Create an account
-              </a>
+              <Link to="/register" style={{ color: "#a0c090" }} className="underline">
+              Create an account
+            </Link>
             </p>
 
           </div>
