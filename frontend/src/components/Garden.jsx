@@ -1,3 +1,5 @@
+import WoodFrame from "./WoodFrame"
+
 function Garden({ gardenStage }) {
 
   const getGardenState = () => {
@@ -36,27 +38,23 @@ function Garden({ gardenStage }) {
   const garden = getGardenState()
 
   return (
-    <div
-      className="rounded-3xl p-8 text-center transition-all"
-      style={{
-        background: "transparent",
-        border: "2px solid rgba(92, 74, 58, 0.5)",
-      }}
-    >
-      <p className="text-7xl mb-4">{garden.emoji}</p>
-      <h3 className="text-2xl mb-2" style={{ color: "#5c4a3a" }}>{garden.label}</h3>
-      <p className="mb-3" style={{ color: "#9c8572" }}>{garden.message}</p>
-      <span
-        className="text-xs px-3 py-1 rounded-full"
-        style={{
-          background: "transparent",
-          border: "1px solid rgba(92, 74, 58, 0.4)",
-          color: "#9c8572",
-        }}
-      >
-        Stage {gardenStage}
-      </span>
-    </div>
+    <WoodFrame>
+      <div className="p-4 text-center">
+        <p className="text-7xl mb-4">{garden.emoji}</p>
+        <h3 className="text-2xl mb-2" style={{ color: "#5c4a3a" }}>{garden.label}</h3>
+        <p className="mb-3" style={{ color: "#d4c4a8" }}>{garden.message}</p>
+        <span
+          className="text-xs px-3 py-1 rounded-full"
+          style={{
+            background: "transparent",
+            border: "1px solid rgba(212, 196, 168, 0.4)",
+            color: "#d4c4a8",
+          }}
+        >
+          Stage {gardenStage}
+        </span>
+      </div>
+    </WoodFrame>
   )
 }
 
