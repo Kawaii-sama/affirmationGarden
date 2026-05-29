@@ -25,6 +25,9 @@ function Dashboard() {
 
       {/* Apothecary Tree */}
       <svg
+        viewBox="0 0 360 225"
+        preserveAspectRatio="xMidYMid slice"
+        shapeRendering="crispEdges"
         style={{
           position: "fixed",
           inset: 0,
@@ -34,9 +37,6 @@ function Dashboard() {
           pointerEvents: "none",
           imageRendering: "pixelated",
         }}
-        viewBox="0 0 360 225"
-        preserveAspectRatio="xMidYMid slice"
-        shapeRendering="crispEdges"
       >
         <rect x="330" y="0" width="30" height="225" fill="#2a1f10" />
         <rect x="332" y="0" width="8" height="225" fill="#3d2e18" opacity="0.6" />
@@ -276,6 +276,12 @@ function Dashboard() {
         <line x1="280" y1="119" x2="280" y2="126" stroke="#DAA520" strokeWidth="0.3" opacity="0.5" />
         <polygon points="280,126 278,130 280,133 282,130" fill="#E8C547" opacity="0.45" />
 
+        <g
+        shapeRendering="crispEdges"
+        imageRendering="pixelated"
+        >
+
+
         {/* ===== SHELF ===== */}
         <rect x="65" y="195" width="270" height="3" fill="#2a1e14" />
         <rect x="65" y="195" width="270" height="1" fill="#4a3828" opacity="0.8" />
@@ -500,6 +506,8 @@ function Dashboard() {
         <ellipse cx="270" cy="190" rx="20" ry="8" fill="#3D6B4F" opacity="0.04" />
         
 
+        </g>
+
         {/* ===== ENCHANTED SCEPTER (on shelf, leaning on trunk) ===== */}
         {/* Main shaft */}
         <rect x="320" y="139" width="3" height="4" fill="#6B4226" opacity="0.85" />
@@ -686,7 +694,25 @@ function Dashboard() {
         zIndex: 2,
         pointerEvents: "none",
         animation: "cloakFloat 4s ease-in-out infinite",
+        imageRendering: "pixelated",
+        filter: "url(#pixelate)",
       }}>
+
+
+
+      <svg width="0" height="0" style={{ position: "absolute" }}>
+          <defs>
+            <filter id="pixelate">
+              <feFlood x="2" y="2" height="1" width="1"/>
+              <feComposite width="3" height="3"/>
+              <feTile result="a"/>
+              <feComposite in="SourceGraphic" in2="a" operator="in"/>
+              <feMorphology operator="dilate" radius="0.8"/>
+            </filter>
+          </defs>
+        </svg>
+
+        
         <style>{`
           @keyframes cloakFloat {
             0% { transform: translateX(-50%) translateY(0px); }
