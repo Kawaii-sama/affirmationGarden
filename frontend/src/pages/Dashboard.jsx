@@ -25,7 +25,7 @@ function Dashboard() {
 
       {/* Apothecary Tree */}
       <svg
-        viewBox="0 0 360 225"
+        viewBox="0 0 360 214"
         preserveAspectRatio="xMidYMid slice"
         shapeRendering="crispEdges"
         style={{
@@ -287,225 +287,224 @@ function Dashboard() {
         <rect x="65" y="195" width="270" height="1" fill="#4a3828" opacity="0.8" />
         <rect x="65" y="197" width="270" height="1" fill="#1a1208" opacity="0.9" />
         {/* Brackets */}
-        <line x1="100" y1="198" x2="100" y2="204" stroke="#2a1e14" strokeWidth="1.5" opacity="0.8" />
-        <line x1="100" y1="204" x2="94" y2="204" stroke="#2a1e14" strokeWidth="1.5" opacity="0.8" />
-        <line x1="300" y1="198" x2="300" y2="204" stroke="#2a1e14" strokeWidth="1.5" opacity="0.8" />
-        <line x1="300" y1="204" x2="306" y2="204" stroke="#2a1e14" strokeWidth="1.5" opacity="0.8" />
+        <rect x="99" y="198" width="2" height="6" fill="#2a1e14" opacity="0.8" />
+        <rect x="93" y="203" width="7" height="2" fill="#2a1e14" opacity="0.8" />
+        <rect x="299" y="198" width="2" height="6" fill="#2a1e14" opacity="0.8" />
+        <rect x="300" y="203" width="7" height="2" fill="#2a1e14" opacity="0.8" />
 
         {/* ===== BOWLS (left side) ===== */}
         {/* Bowl 1 - large wooden */}
-        <path d="M78 195 Q76 190 78 188 Q82 186 88 186 Q94 186 96 188 Q98 190 96 195 Z"
-          fill="#3d2e20" stroke="#2a1e14" strokeWidth="0.8" opacity="0.9" />
-        <ellipse cx="87" cy="188" rx="7" ry="2.5" fill="#2a1e14" opacity="0.5" />
-        <ellipse cx="87" cy="187.5" rx="6" ry="1.8" fill="#1a1208" opacity="0.3" />
+        <rect x="78" y="193" width="18" height="2" fill="#3d2e20" opacity="0.9" />
+        <rect x="76" y="191" width="20" height="2" fill="#3d2e20" opacity="0.85" />
+        <rect x="78" y="189" width="18" height="2" fill="#3d2e20" opacity="0.8" />
+        <rect x="80" y="187" width="14" height="2" fill="#3d2e20" opacity="0.75" />
+        <rect x="82" y="186" width="10" height="1" fill="#2a1e14" opacity="0.5" />
+        <rect x="83" y="186" width="8" height="1" fill="#1a1208" opacity="0.3" />
         {/* Contents */}
-        <rect x="84" y="187" width="1" height="1" fill="#C87090" opacity="0.5" />
-        <rect x="86" y="186.5" width="1" height="1" fill="#DAA520" opacity="0.5" />
-        <rect x="88" y="187" width="1" height="1" fill="#9370DB" opacity="0.5" />
-        <rect x="90" y="186.5" width="1" height="1" fill="#C87090" opacity="0.4" />
+        <rect x="84" y="186" width="1" height="1" fill="#C87090" opacity="0.5" />
+        <rect x="86" y="186" width="1" height="1" fill="#DAA520" opacity="0.5" />
+        <rect x="88" y="186" width="1" height="1" fill="#9370DB" opacity="0.5" />
+        <rect x="90" y="186" width="1" height="1" fill="#C87090" opacity="0.4" />
 
         {/* Bowl 2 - small ceramic */}
-        <path d="M70 195 Q69 192 70 190 Q72 189 76 189 Q80 189 82 190 Q83 192 82 195 Z"
-          fill="#4a3828" stroke="#2a1e14" strokeWidth="0.6" opacity="0.85" />
-        <ellipse cx="76" cy="190" rx="5" ry="1.5" fill="#2a1e14" opacity="0.4" />
+        <rect x="70" y="193" width="13" height="2" fill="#4a3828" opacity="0.85" />
+        <rect x="69" y="191" width="13" height="2" fill="#4a3828" opacity="0.8" />
+        <rect x="70" y="189" width="12" height="2" fill="#4a3828" opacity="0.75" />
+        <rect x="71" y="188" width="10" height="1" fill="#2a1e14" opacity="0.4" />
 
         {/* Bowl 3 - tiny */}
-        <path d="M99 195 Q98 193 99 191.5 Q101 190.5 104 190.5 Q107 190.5 108 191.5 Q109 193 108 195 Z"
-          fill="#3d2e20" stroke="#2a1e14" strokeWidth="0.5" opacity="0.85" />
-        <ellipse cx="103.5" cy="191.5" rx="4" ry="1.2" fill="#2a1e14" opacity="0.35" />
-        {/* Yellow powder inside */}
-        <ellipse cx="103.5" cy="192" rx="2.5" ry="0.8" fill="#DAA520" opacity="0.3" />
+        <rect x="99" y="193" width="10" height="2" fill="#3d2e20" opacity="0.85" />
+        <rect x="100" y="191" width="8" height="2" fill="#3d2e20" opacity="0.8" />
+        <rect x="101" y="190" width="6" height="1" fill="#2a1e14" opacity="0.35" />
+        <rect x="102" y="190" width="4" height="1" fill="#DAA520" opacity="0.3" />
 
-        {/* ===== CAULDRON (center-left) ===== */}
-        <path d="M115 195 Q112 189 113 185 Q116 182 122 181 Q128 182 131 185 Q132 189 129 195 Z"
-          fill="#1a1208" stroke="#0a0f07" strokeWidth="0.8" opacity="0.95" />
-        <ellipse cx="122" cy="183" rx="8" ry="3" fill="#0a0f07" opacity="0.5" />
-        <ellipse cx="122" cy="182.5" rx="7" ry="2.5" fill="none" stroke="#3d2e20" strokeWidth="0.5" opacity="0.6" />
+        {/* ===== CAULDRON ===== */}
+        <rect x="113" y="193" width="18" height="2" fill="#1a1208" opacity="0.95" />
+        <rect x="112" y="191" width="20" height="2" fill="#1a1208" opacity="0.9" />
+        <rect x="112" y="189" width="20" height="2" fill="#1a1208" opacity="0.88" />
+        <rect x="113" y="187" width="18" height="2" fill="#1a1208" opacity="0.85" />
+        <rect x="114" y="185" width="16" height="2" fill="#1a1208" opacity="0.82" />
+        <rect x="115" y="183" width="14" height="2" fill="#1a1208" opacity="0.8" />
         {/* Rim */}
-        <ellipse cx="122" cy="183" rx="8.5" ry="2" fill="none" stroke="#2a1e14" strokeWidth="0.8" opacity="0.7" />
+        <rect x="113" y="183" width="16" height="1" fill="#2a1e14" opacity="0.7" />
+        <rect x="114" y="182" width="14" height="1" fill="#3d2e20" opacity="0.5" />
         {/* Glowing contents */}
-        <ellipse cx="122" cy="184" rx="5" ry="1.5" fill="#3D6B4F" opacity="0.35" />
-        <ellipse cx="121" cy="183.5" rx="2" ry="0.8" fill="#5C8A4A" opacity="0.2" />
+        <rect x="116" y="183" width="10" height="1" fill="#3D6B4F" opacity="0.35" />
+        <rect x="118" y="183" width="6" height="1" fill="#5C8A4A" opacity="0.2" />
         {/* Handles */}
-        <path d="M113 186 Q110 186 110 188 Q110 190 113 190" stroke="#2a1e14" fill="none" strokeWidth="0.6" opacity="0.7" />
-        <path d="M131 186 Q134 186 134 188 Q134 190 131 190" stroke="#2a1e14" fill="none" strokeWidth="0.6" opacity="0.7" />
+        <rect x="110" y="186" width="2" height="4" fill="#2a1e14" opacity="0.7" />
+        <rect x="109" y="187" width="2" height="2" fill="#2a1e14" opacity="0.5" />
+        <rect x="132" y="186" width="2" height="4" fill="#2a1e14" opacity="0.7" />
+        <rect x="133" y="187" width="2" height="2" fill="#2a1e14" opacity="0.5" />
         {/* Legs */}
-        <line x1="116" y1="195" x2="115" y2="197" stroke="#1a1208" strokeWidth="0.8" opacity="0.7" />
-        <line x1="128" y1="195" x2="129" y2="197" stroke="#1a1208" strokeWidth="0.8" opacity="0.7" />
+        <rect x="115" y="195" width="2" height="2" fill="#1a1208" opacity="0.7" />
+        <rect x="127" y="195" width="2" height="2" fill="#1a1208" opacity="0.7" />
 
-        {/* ===== OPEN GRIMOIRE BOOK (center) ===== */}
+        {/* ===== OPEN GRIMOIRE BOOK ===== */}
         {/* Stand legs */}
-        <line x1="148" y1="195" x2="146" y2="189" stroke="#2a1e14" strokeWidth="0.8" opacity="0.7" />
-        <line x1="166" y1="195" x2="168" y2="189" stroke="#2a1e14" strokeWidth="0.8" opacity="0.7" />
+        <rect x="147" y="193" width="1" height="2" fill="#2a1e14" opacity="0.7" />
+        <rect x="146" y="191" width="1" height="2" fill="#2a1e14" opacity="0.6" />
+        <rect x="145" y="189" width="1" height="2" fill="#2a1e14" opacity="0.5" />
+        <rect x="166" y="193" width="1" height="2" fill="#2a1e14" opacity="0.7" />
+        <rect x="167" y="191" width="1" height="2" fill="#2a1e14" opacity="0.6" />
+        <rect x="168" y="189" width="1" height="2" fill="#2a1e14" opacity="0.5" />
         {/* Left page */}
-        <path d="M140 189 Q144 187 157 186.5 L157 178 Q144 178.5 140 181 Z"
-          fill="#d4bc96" stroke="#3d2e20" strokeWidth="0.5" opacity="0.9" />
+        <rect x="140" y="188" width="17" height="1" fill="#d4bc96" opacity="0.9" />
+        <rect x="140" y="187" width="17" height="1" fill="#d4bc96" opacity="0.88" />
+        <rect x="141" y="186" width="16" height="1" fill="#d4bc96" opacity="0.85" />
+        <rect x="141" y="185" width="16" height="1" fill="#d4bc96" opacity="0.82" />
+        <rect x="142" y="184" width="15" height="1" fill="#d4bc96" opacity="0.8" />
+        <rect x="142" y="183" width="15" height="1" fill="#d4bc96" opacity="0.78" />
+        <rect x="143" y="182" width="14" height="1" fill="#d4bc96" opacity="0.75" />
+        <rect x="143" y="181" width="14" height="1" fill="#d4bc96" opacity="0.72" />
+        <rect x="144" y="180" width="13" height="1" fill="#d4bc96" opacity="0.7" />
+        <rect x="144" y="179" width="13" height="1" fill="#d4bc96" opacity="0.68" />
         {/* Right page */}
-        <path d="M157 186.5 Q170 187 174 189 L174 181 Q170 178.5 157 178 Z"
-          fill="#e0d0b8" stroke="#3d2e20" strokeWidth="0.5" opacity="0.9" />
+        <rect x="157" y="188" width="17" height="1" fill="#e0d0b8" opacity="0.9" />
+        <rect x="157" y="187" width="17" height="1" fill="#e0d0b8" opacity="0.88" />
+        <rect x="157" y="186" width="17" height="1" fill="#e0d0b8" opacity="0.85" />
+        <rect x="157" y="185" width="17" height="1" fill="#e0d0b8" opacity="0.82" />
+        <rect x="157" y="184" width="17" height="1" fill="#e0d0b8" opacity="0.8" />
+        <rect x="157" y="183" width="17" height="1" fill="#e0d0b8" opacity="0.78" />
+        <rect x="157" y="182" width="16" height="1" fill="#e0d0b8" opacity="0.75" />
+        <rect x="157" y="181" width="16" height="1" fill="#e0d0b8" opacity="0.72" />
+        <rect x="157" y="180" width="15" height="1" fill="#e0d0b8" opacity="0.7" />
+        <rect x="157" y="179" width="15" height="1" fill="#e0d0b8" opacity="0.68" />
         {/* Spine */}
-        <line x1="157" y1="178" x2="157" y2="186.5" stroke="#2a1e14" strokeWidth="0.8" opacity="0.7" />
-        {/* Book cover edges */}
-        <path d="M140 189 Q139 189.5 140 190" stroke="#3d2e20" strokeWidth="0.5" opacity="0.6" />
-        <path d="M174 189 Q175 189.5 174 190" stroke="#3d2e20" strokeWidth="0.5" opacity="0.6" />
-
-        {/* Left page - sigil + text */}
-        {/* Small sigil circle */}
-        <circle cx="145" cy="181" r="2" fill="none" stroke="#3d2e20" strokeWidth="0.3" opacity="0.5" />
-        <polygon points="145,179.5 143.5,182 146.5,182" fill="none" stroke="#3d2e20" strokeWidth="0.2" opacity="0.4" />
-        {/* Text lines */}
-        <line x1="142" y1="184" x2="155" y2="183.5" stroke="#3d2e20" strokeWidth="0.2" opacity="0.4" />
-        <line x1="142" y1="185" x2="154" y2="184.7" stroke="#3d2e20" strokeWidth="0.2" opacity="0.35" />
-        <line x1="142" y1="186" x2="153" y2="185.7" stroke="#3d2e20" strokeWidth="0.2" opacity="0.35" />
-        <line x1="142" y1="187" x2="155" y2="186.8" stroke="#3d2e20" strokeWidth="0.2" opacity="0.3" />
-        {/* Small herb sketch on left */}
-        <line x1="150" y1="180" x2="150" y2="183" stroke="#2E5939" strokeWidth="0.3" opacity="0.5" />
-        <ellipse cx="149" cy="180.5" rx="1" ry="0.5" fill="#3D6B4F" opacity="0.4" transform="rotate(-20,149,180.5)" />
-        <ellipse cx="151" cy="180" rx="1" ry="0.5" fill="#4A7C59" opacity="0.4" transform="rotate(20,151,180)" />
-
-        {/* Right page - botanical herb drawing */}
-        {/* Main stem */}
-        <line x1="165" y1="186" x2="165" y2="179.5" stroke="#2E5939" strokeWidth="0.5" opacity="0.7" />
-        {/* Branches */}
-        <line x1="165" y1="185" x2="162" y2="183.5" stroke="#3D6B4F" strokeWidth="0.3" opacity="0.6" />
-        <line x1="165" y1="184" x2="168" y2="182.5" stroke="#3D6B4F" strokeWidth="0.3" opacity="0.6" />
-        <line x1="165" y1="182.5" x2="162.5" y2="181" stroke="#3D6B4F" strokeWidth="0.3" opacity="0.55" />
-        <line x1="165" y1="181.5" x2="167.5" y2="180" stroke="#3D6B4F" strokeWidth="0.3" opacity="0.55" />
-        {/* Leaves */}
-        <ellipse cx="161" cy="183" rx="1.5" ry="0.7" fill="#2E5939" opacity="0.5" transform="rotate(-30,161,183)" />
-        <ellipse cx="169" cy="182" rx="1.5" ry="0.7" fill="#3D6B4F" opacity="0.5" transform="rotate(25,169,182)" />
-        <ellipse cx="162" cy="180.5" rx="1.2" ry="0.6" fill="#4A7C59" opacity="0.45" transform="rotate(-35,162,180.5)" />
-        <ellipse cx="168" cy="179.5" rx="1.2" ry="0.6" fill="#2E5939" opacity="0.45" transform="rotate(30,168,179.5)" />
+        <rect x="157" y="179" width="1" height="10" fill="#2a1e14" opacity="0.7" />
+        {/* Sigil on left page */}
+        <rect x="145" y="181" width="1" height="1" fill="#3d2e20" opacity="0.5" />
+        <rect x="144" y="182" width="3" height="1" fill="#3d2e20" opacity="0.4" />
+        <rect x="145" y="183" width="1" height="1" fill="#3d2e20" opacity="0.4" />
+        {/* Text lines left page */}
+        <rect x="142" y="184" width="8" height="1" fill="#3d2e20" opacity="0.3" />
+        <rect x="142" y="185" width="7" height="1" fill="#3d2e20" opacity="0.28" />
+        <rect x="142" y="186" width="9" height="1" fill="#3d2e20" opacity="0.25" />
+        <rect x="142" y="187" width="6" height="1" fill="#3d2e20" opacity="0.22" />
+        {/* Herb stem left page */}
+        <rect x="150" y="180" width="1" height="3" fill="#2E5939" opacity="0.5" />
+        <rect x="149" y="181" width="1" height="1" fill="#3D6B4F" opacity="0.4" />
+        <rect x="151" y="180" width="1" height="1" fill="#4A7C59" opacity="0.4" />
+        {/* Botanical on right page */}
+        <rect x="165" y="180" width="1" height="6" fill="#2E5939" opacity="0.7" />
+        <rect x="163" y="182" width="2" height="1" fill="#3D6B4F" opacity="0.6" />
+        <rect x="166" y="181" width="2" height="1" fill="#3D6B4F" opacity="0.6" />
+        <rect x="162" y="183" width="1" height="1" fill="#2E5939" opacity="0.5" />
+        <rect x="168" y="182" width="1" height="1" fill="#4A7C59" opacity="0.5" />
+        <rect x="161" y="183" width="1" height="1" fill="#2E5939" opacity="0.45" />
+        <rect x="169" y="183" width="1" height="1" fill="#3D6B4F" opacity="0.45" />
         {/* Flower at top */}
-        <circle cx="165" cy="179" r="1" fill="#9370DB" opacity="0.5" />
-        <ellipse cx="164" cy="179.5" rx="0.8" ry="1" fill="#8A65C8" opacity="0.4" transform="rotate(-20,164,179.5)" />
-        <ellipse cx="166" cy="179.5" rx="0.8" ry="1" fill="#9370DB" opacity="0.4" transform="rotate(20,166,179.5)" />
-        <circle cx="165" cy="179.2" r="0.4" fill="#DAA520" opacity="0.5" />
-        {/* Root lines at bottom */}
-        <path d="M165 186 Q163 187 161 188" stroke="#5c4a3a" fill="none" strokeWidth="0.2" opacity="0.35" />
-        <path d="M165 186 Q167 187 169 188" stroke="#5c4a3a" fill="none" strokeWidth="0.2" opacity="0.35" />
+        <rect x="164" y="179" width="1" height="1" fill="#9370DB" opacity="0.5" />
+        <rect x="165" y="179" width="1" height="1" fill="#DAA520" opacity="0.5" />
+        <rect x="166" y="179" width="1" height="1" fill="#9370DB" opacity="0.5" />
+        <rect x="165" y="178" width="1" height="1" fill="#8A65C8" opacity="0.4" />
+        {/* Roots */}
+        <rect x="163" y="186" width="1" height="1" fill="#5c4a3a" opacity="0.35" />
+        <rect x="167" y="186" width="1" height="1" fill="#5c4a3a" opacity="0.35" />
 
         {/* ===== MORTAR AND PESTLE ===== */}
-        <path d="M182 195 Q180 191 181 188 Q183 186 188 186 Q193 186 195 188 Q196 191 194 195 Z"
-          fill="#3d2e20" stroke="#1a1208" strokeWidth="0.6" opacity="0.9" />
-        <ellipse cx="188" cy="188" rx="6" ry="2" fill="#1a1208" opacity="0.4" />
-        <ellipse cx="188" cy="187.5" rx="6.5" ry="1.5" fill="none" stroke="#2a1e14" strokeWidth="0.6" opacity="0.7" />
+        <rect x="181" y="193" width="15" height="2" fill="#3d2e20" opacity="0.9" />
+        <rect x="180" y="191" width="16" height="2" fill="#3d2e20" opacity="0.88" />
+        <rect x="181" y="189" width="14" height="2" fill="#3d2e20" opacity="0.85" />
+        <rect x="182" y="187" width="12" height="2" fill="#3d2e20" opacity="0.82" />
+        <rect x="183" y="186" width="10" height="1" fill="#1a1208" opacity="0.4" />
+        <rect x="184" y="186" width="8" height="1" fill="#3D6B4F" opacity="0.35" />
+        {/* Rim */}
+        <rect x="181" y="186" width="14" height="1" fill="#2a1e14" opacity="0.7" />
         {/* Pestle */}
-        <line x1="186" y1="187" x2="179" y2="180" stroke="#3d2e20" strokeWidth="2" strokeLinecap="round" opacity="0.85" />
-        <line x1="186" y1="187" x2="179" y2="180" stroke="#4a3828" strokeWidth="1" strokeLinecap="round" opacity="0.5" />
-        <ellipse cx="178.5" cy="179.5" rx="1.2" ry="1.5" fill="#3d2e20" opacity="0.8" transform="rotate(-40,178.5,179.5)" />
-        {/* Ground herbs */}
-        <ellipse cx="188" cy="188.5" rx="3.5" ry="1" fill="#3D6B4F" opacity="0.35" />
+        <rect x="185" y="186" width="1" height="1" fill="#3d2e20" opacity="0.85" />
+        <rect x="184" y="185" width="1" height="1" fill="#3d2e20" opacity="0.8" />
+        <rect x="183" y="184" width="1" height="1" fill="#4a3828" opacity="0.75" />
+        <rect x="182" y="183" width="1" height="1" fill="#3d2e20" opacity="0.7" />
+        <rect x="181" y="182" width="1" height="1" fill="#4a3828" opacity="0.65" />
+        <rect x="180" y="181" width="1" height="1" fill="#3d2e20" opacity="0.6" />
+        <rect x="179" y="180" width="2" height="2" fill="#3d2e20" opacity="0.8" />
 
         {/* ===== KNIFE ===== */}
-        {/* Blade */}
-        <path d="M200 193 L212 190 L213 191 L201 194 Z" fill="#a0a0a0" stroke="#808080" strokeWidth="0.2" opacity="0.7" />
-        {/* Blade shine */}
-        <line x1="203" y1="192.5" x2="211" y2="190.5" stroke="#d0d0d0" strokeWidth="0.2" opacity="0.3" />
-        {/* Handle */}
-        <rect x="197" y="192.5" width="4" height="2" rx="0.5" fill="#3d2e20" stroke="#2a1e14" strokeWidth="0.3" opacity="0.85" />
-        {/* Handle rivets */}
-        <circle cx="198.5" cy="193.5" r="0.3" fill="#DAA520" opacity="0.5" />
-        <circle cx="200" cy="193.5" r="0.3" fill="#DAA520" opacity="0.5" />
+        <rect x="200" y="193" width="13" height="1" fill="#a0a0a0" opacity="0.7" />
+        <rect x="201" y="192" width="11" height="1" fill="#b0b0b0" opacity="0.5" />
+        <rect x="202" y="192" width="9" height="1" fill="#d0d0d0" opacity="0.3" />
+        <rect x="197" y="192" width="4" height="2" fill="#3d2e20" opacity="0.85" />
+        <rect x="198" y="193" width="1" height="1" fill="#DAA520" opacity="0.5" />
+        <rect x="200" y="193" width="1" height="1" fill="#DAA520" opacity="0.5" />
 
-        {/* ===== PILE OF BOOKS (right-center) ===== */}
-        {/* Bottom book */}
-        <rect x="220" y="191" width="18" height="4" rx="0.3" fill="#2a1e14" stroke="#1a1208" strokeWidth="0.4" opacity="0.9" />
-        <rect x="220" y="191.5" width="0.8" height="3" fill="#DAA520" opacity="0.35" />
-        <line x1="222" y1="192" x2="236" y2="192" stroke="#1a1208" strokeWidth="0.2" opacity="0.3" />
-        {/* Middle book */}
-        <rect x="221" y="187.5" width="16" height="3.5" rx="0.3" fill="#6B3020" stroke="#4a2018" strokeWidth="0.4" opacity="0.85" />
-        <rect x="221" y="188" width="0.8" height="2.5" fill="#DAA520" opacity="0.3" />
-        {/* Top book (askew) */}
-        <g transform="rotate(-5, 230, 186)">
-          <rect x="222" y="184.5" width="14" height="3" rx="0.3" fill="#1a3a15" stroke="#0a2a0a" strokeWidth="0.4" opacity="0.85" />
-          <rect x="222" y="185" width="0.6" height="2" fill="#DAA520" opacity="0.25" />
-        </g>
-        {/* Thin book on top */}
-        <g transform="rotate(7, 230, 183)">
-          <rect x="223" y="182" width="12" height="2.5" rx="0.2" fill="#3d2e20" stroke="#2a1e14" strokeWidth="0.3" opacity="0.8" />
-        </g>
+        {/* ===== PILE OF BOOKS ===== */}
+        <rect x="220" y="191" width="18" height="4" fill="#2a1e14" opacity="0.9" />
+        <rect x="220" y="191" width="1" height="3" fill="#DAA520" opacity="0.35" />
+        <rect x="221" y="192" width="16" height="1" fill="#1a1208" opacity="0.3" />
+        <rect x="221" y="187" width="16" height="4" fill="#6B3020" opacity="0.85" />
+        <rect x="221" y="188" width="1" height="2" fill="#DAA520" opacity="0.3" />
+        <rect x="222" y="184" width="14" height="3" fill="#1a3a15" opacity="0.85" />
+        <rect x="222" y="185" width="1" height="1" fill="#DAA520" opacity="0.25" />
+        <rect x="223" y="182" width="12" height="2" fill="#3d2e20" opacity="0.8" />
 
         {/* ===== SCROLLS ===== */}
-        {/* Horizontal scroll */}
-        <rect x="215" y="193.5" width="7" height="2" rx="1" fill="#c4a87c" stroke="#5c4a3a" strokeWidth="0.3" opacity="0.75" />
-        <ellipse cx="215" cy="194.5" rx="0.8" ry="1" fill="#b39568" stroke="#5c4a3a" strokeWidth="0.2" opacity="0.7" />
-        <ellipse cx="222" cy="194.5" rx="0.8" ry="1" fill="#b39568" stroke="#5c4a3a" strokeWidth="0.2" opacity="0.7" />
-        {/* Upright scroll */}
-        <rect x="239" y="185" width="2" height="10" rx="1" fill="#c4a87c" stroke="#5c4a3a" strokeWidth="0.3" opacity="0.75" />
-        <ellipse cx="240" cy="185" rx="1" ry="0.6" fill="#b39568" stroke="#5c4a3a" strokeWidth="0.2" opacity="0.7" />
-        {/* Diagonal scroll */}
-        <g transform="rotate(-12, 242, 190)">
-          <rect x="241" y="186" width="1.8" height="9" rx="0.8" fill="#d4bc96" stroke="#5c4a3a" strokeWidth="0.2" opacity="0.7" />
-        </g>
+        <rect x="215" y="193" width="7" height="2" fill="#c4a87c" opacity="0.75" />
+        <rect x="214" y="193" width="1" height="2" fill="#b39568" opacity="0.7" />
+        <rect x="222" y="193" width="1" height="2" fill="#b39568" opacity="0.7" />
+        <rect x="239" y="185" width="2" height="10" fill="#c4a87c" opacity="0.75" />
+        <rect x="239" y="184" width="2" height="1" fill="#b39568" opacity="0.7" />
+        <rect x="239" y="195" width="2" height="1" fill="#b39568" opacity="0.7" />
+        <rect x="241" y="186" width="2" height="9" fill="#d4bc96" opacity="0.7" />
+        <rect x="241" y="185" width="2" height="1" fill="#b39568" opacity="0.65" />
 
-        {/* ===== POTION BOTTLES (right side - like an almirah) ===== */}
-        {/* Tall bottle 1 */}
-        <rect x="255" y="186" width="4" height="9" rx="0.5" fill="#1a3a15" fillOpacity="0.3" stroke="#4A7C59" strokeWidth="0.4" opacity="0.8" />
-        <rect x="256" y="184.5" width="2" height="2" rx="0.3" fill="#1a3a15" fillOpacity="0.2" stroke="#4A7C59" strokeWidth="0.3" opacity="0.7" />
-        <rect x="256.2" y="183.5" width="1.6" height="1.5" rx="0.3" fill="#6b5a48" opacity="0.8" />
-        {/* Herb inside */}
-        <line x1="257" y1="192" x2="257" y2="189" stroke="#3D6B4F" strokeWidth="0.3" opacity="0.5" />
-        <ellipse cx="256.5" cy="189.5" rx="0.6" ry="0.4" fill="#4A7C59" opacity="0.4" />
-        <ellipse cx="257.5" cy="189" rx="0.6" ry="0.4" fill="#5C8A4A" opacity="0.4" />
-        {/* Glow */}
-        <ellipse cx="257" cy="191" rx="1.5" ry="3" fill="#4A7C59" opacity="0.08" />
-
-        {/* Tall bottle 2 */}
-        <rect x="261" y="185" width="4.5" height="10" rx="0.5" fill="#1a3a15" fillOpacity="0.25" stroke="#3D6B4F" strokeWidth="0.4" opacity="0.8" />
-        <rect x="262" y="183" width="2.5" height="2.5" rx="0.3" fill="#1a3a15" fillOpacity="0.15" stroke="#3D6B4F" strokeWidth="0.3" opacity="0.7" />
-        <rect x="262.3" y="182" width="1.9" height="1.5" rx="0.3" fill="#6b5a48" opacity="0.8" />
-        {/* Flower inside */}
-        <circle cx="263.2" cy="190" r="0.8" fill="#DAA520" opacity="0.4" />
-        <line x1="263.2" y1="190.8" x2="263.2" y2="193" stroke="#3D6B4F" strokeWidth="0.3" opacity="0.5" />
-        <ellipse cx="263.2" cy="191" rx="1.5" ry="3.5" fill="#3D6B4F" opacity="0.06" />
-
-        {/* Short round bottle */}
-        <ellipse cx="269" cy="191" rx="3" ry="4" fill="#1a3a15" fillOpacity="0.25" stroke="#4A7C59" strokeWidth="0.4" opacity="0.8" />
-        <rect x="268" y="186.5" width="2" height="2" rx="0.3" fill="#1a3a15" fillOpacity="0.15" stroke="#4A7C59" strokeWidth="0.3" opacity="0.7" />
-        <rect x="268.2" y="185.5" width="1.6" height="1.5" rx="0.3" fill="#6b5a48" opacity="0.8" />
-        {/* Liquid */}
-        <ellipse cx="269" cy="192.5" rx="2" ry="2" fill="#2E5939" opacity="0.2" />
-        <ellipse cx="269" cy="191" rx="1.5" ry="3" fill="#4A7C59" opacity="0.06" />
-
-        {/* Tall thin bottle */}
-        <rect x="274" y="184" width="3" height="11" rx="0.4" fill="#1a3a15" fillOpacity="0.2" stroke="#3D6B4F" strokeWidth="0.4" opacity="0.8" />
-        <rect x="274.5" y="182.5" width="2" height="2" rx="0.3" fill="#1a3a15" fillOpacity="0.15" stroke="#3D6B4F" strokeWidth="0.3" opacity="0.7" />
-        <rect x="274.7" y="181.5" width="1.6" height="1.5" rx="0.3" fill="#6b5a48" opacity="0.8" />
-        {/* Leaves inside */}
-        <ellipse cx="275.5" cy="190" rx="0.8" ry="0.5" fill="#4A7C59" opacity="0.45" transform="rotate(-15,275.5,190)" />
-        <ellipse cx="275.5" cy="188" rx="0.7" ry="0.5" fill="#5C8A4A" opacity="0.4" transform="rotate(20,275.5,188)" />
-        <line x1="275.5" y1="193" x2="275.5" y2="187" stroke="#2E5939" strokeWidth="0.2" opacity="0.4" />
-        <ellipse cx="275.5" cy="190" rx="1" ry="4" fill="#3D6B4F" opacity="0.06" />
-
-        {/* Wide bottle */}
-        <rect x="279" y="187" width="5" height="8" rx="1" fill="#1a3a15" fillOpacity="0.3" stroke="#4A7C59" strokeWidth="0.4" opacity="0.8" />
-        <rect x="280" y="185" width="3" height="2.5" rx="0.4" fill="#1a3a15" fillOpacity="0.15" stroke="#4A7C59" strokeWidth="0.3" opacity="0.7" />
-        <rect x="280.3" y="184" width="2.4" height="1.5" rx="0.3" fill="#6b5a48" opacity="0.8" />
-        {/* Herbs stuffed */}
-        <ellipse cx="281.5" cy="191" rx="1.5" ry="2.5" fill="#2E5939" opacity="0.2" />
-        <rect x="280" y="189" width="0.5" height="2" fill="#4A7C59" opacity="0.3" />
-        <rect x="281.5" y="188.5" width="0.5" height="2.5" fill="#3D6B4F" opacity="0.3" />
-        <rect x="283" y="189" width="0.5" height="2" fill="#5C8A4A" opacity="0.3" />
-        <ellipse cx="281.5" cy="190" rx="2" ry="3" fill="#4A7C59" opacity="0.06" />
-
-        {/* Small round bottle */}
-        <ellipse cx="288" cy="192" rx="2.5" ry="3" fill="#1a3a15" fillOpacity="0.25" stroke="#3D6B4F" strokeWidth="0.4" opacity="0.8" />
-        <rect x="287" y="188.5" width="2" height="1.5" rx="0.3" fill="#1a3a15" fillOpacity="0.15" stroke="#3D6B4F" strokeWidth="0.3" opacity="0.7" />
-        <rect x="287.2" y="187.5" width="1.6" height="1.5" rx="0.3" fill="#6b5a48" opacity="0.8" />
-        <circle cx="288" cy="192.5" r="1" fill="#DAA520" opacity="0.15" />
-        <ellipse cx="288" cy="191.5" rx="1.2" ry="2" fill="#3D6B4F" opacity="0.06" />
-
-        {/* Tiny bottle */}
-        <rect x="293" y="189" width="3" height="6" rx="0.4" fill="#1a3a15" fillOpacity="0.2" stroke="#4A7C59" strokeWidth="0.3" opacity="0.75" />
-        <rect x="293.5" y="187.5" width="2" height="2" rx="0.3" fill="#1a3a15" fillOpacity="0.15" stroke="#4A7C59" strokeWidth="0.2" opacity="0.65" />
-        <rect x="293.7" y="186.5" width="1.6" height="1.5" rx="0.3" fill="#6b5a48" opacity="0.75" />
-        <ellipse cx="294.5" cy="192" rx="0.8" ry="1.5" fill="#5C8A4A" opacity="0.15" />
-
-        {/* Bottle glows - subtle green light */}
-        <ellipse cx="270" cy="190" rx="20" ry="8" fill="#3D6B4F" opacity="0.04" />
-        
-
+        {/* ===== POTION BOTTLES ===== */}
+        {/* Bottle 1 */}
+        <rect x="255" y="186" width="4" height="9" fill="#1a3a15" fillOpacity="0.3" opacity="0.8" />
+        <rect x="255" y="186" width="4" height="9" fill="none" stroke="#4A7C59" strokeWidth="0.4" opacity="0.8" />
+        <rect x="256" y="184" width="2" height="2" fill="#1a3a15" fillOpacity="0.2" opacity="0.7" />
+        <rect x="256" y="184" width="2" height="2" fill="none" stroke="#4A7C59" strokeWidth="0.3" opacity="0.7" />
+        <rect x="256" y="183" width="2" height="1" fill="#6b5a48" opacity="0.8" />
+        <rect x="257" y="189" width="1" height="3" fill="#3D6B4F" opacity="0.4" />
+        <rect x="256" y="190" width="1" height="1" fill="#4A7C59" opacity="0.4" />
+        <rect x="258" y="189" width="1" height="1" fill="#5C8A4A" opacity="0.4" />
+        {/* Bottle 2 */}
+        <rect x="261" y="185" width="5" height="10" fill="#1a3a15" fillOpacity="0.25" opacity="0.8" />
+        <rect x="261" y="185" width="5" height="10" fill="none" stroke="#3D6B4F" strokeWidth="0.4" opacity="0.8" />
+        <rect x="262" y="183" width="3" height="2" fill="#1a3a15" fillOpacity="0.15" opacity="0.7" />
+        <rect x="262" y="183" width="3" height="2" fill="none" stroke="#3D6B4F" strokeWidth="0.3" opacity="0.7" />
+        <rect x="262" y="182" width="3" height="1" fill="#6b5a48" opacity="0.8" />
+        <rect x="263" y="190" width="1" height="1" fill="#DAA520" opacity="0.4" />
+        <rect x="263" y="191" width="1" height="2" fill="#3D6B4F" opacity="0.4" />
+        {/* Bottle 3 - round (pixel approximation) */}
+        <rect x="267" y="188" width="5" height="7" fill="#1a3a15" fillOpacity="0.25" opacity="0.8" />
+        <rect x="266" y="189" width="7" height="5" fill="#1a3a15" fillOpacity="0.15" opacity="0.6" />
+        <rect x="267" y="188" width="5" height="7" fill="none" stroke="#4A7C59" strokeWidth="0.4" opacity="0.8" />
+        <rect x="268" y="186" width="2" height="2" fill="#1a3a15" fillOpacity="0.15" opacity="0.7" />
+        <rect x="268" y="185" width="2" height="1" fill="#6b5a48" opacity="0.8" />
+        <rect x="268" y="192" width="3" height="2" fill="#2E5939" opacity="0.2" />
+        {/* Bottle 4 - tall thin */}
+        <rect x="274" y="184" width="3" height="11" fill="#1a3a15" fillOpacity="0.2" opacity="0.8" />
+        <rect x="274" y="184" width="3" height="11" fill="none" stroke="#3D6B4F" strokeWidth="0.4" opacity="0.8" />
+        <rect x="274" y="182" width="3" height="2" fill="#1a3a15" fillOpacity="0.15" opacity="0.7" />
+        <rect x="274" y="181" width="3" height="1" fill="#6b5a48" opacity="0.8" />
+        <rect x="275" y="188" width="1" height="2" fill="#4A7C59" opacity="0.4" />
+        <rect x="275" y="187" width="1" height="1" fill="#5C8A4A" opacity="0.35" />
+        <rect x="275" y="189" width="1" height="3" fill="#2E5939" opacity="0.3" />
+        {/* Bottle 5 - wide */}
+        <rect x="279" y="187" width="5" height="8" fill="#1a3a15" fillOpacity="0.3" opacity="0.8" />
+        <rect x="279" y="187" width="5" height="8" fill="none" stroke="#4A7C59" strokeWidth="0.4" opacity="0.8" />
+        <rect x="280" y="185" width="3" height="2" fill="#1a3a15" fillOpacity="0.15" opacity="0.7" />
+        <rect x="280" y="184" width="3" height="1" fill="#6b5a48" opacity="0.8" />
+        <rect x="280" y="189" width="1" height="2" fill="#4A7C59" opacity="0.3" />
+        <rect x="281" y="188" width="1" height="3" fill="#3D6B4F" opacity="0.3" />
+        <rect x="282" y="189" width="1" height="2" fill="#5C8A4A" opacity="0.3" />
+        <rect x="280" y="191" width="4" height="3" fill="#2E5939" opacity="0.15" />
+        {/* Bottle 6 - small round */}
+        <rect x="286" y="189" width="4" height="6" fill="#1a3a15" fillOpacity="0.25" opacity="0.8" />
+        <rect x="285" y="190" width="6" height="4" fill="#1a3a15" fillOpacity="0.1" opacity="0.6" />
+        <rect x="286" y="189" width="4" height="6" fill="none" stroke="#3D6B4F" strokeWidth="0.4" opacity="0.8" />
+        <rect x="287" y="187" width="2" height="2" fill="#1a3a15" fillOpacity="0.15" opacity="0.7" />
+        <rect x="287" y="186" width="2" height="1" fill="#6b5a48" opacity="0.8" />
+        <rect x="287" y="192" width="2" height="2" fill="#DAA520" opacity="0.12" />
+        {/* Bottle 7 - tiny */}
+        <rect x="293" y="189" width="3" height="6" fill="#1a3a15" fillOpacity="0.2" opacity="0.75" />
+        <rect x="293" y="189" width="3" height="6" fill="none" stroke="#4A7C59" strokeWidth="0.3" opacity="0.75" />
+        <rect x="293" y="187" width="3" height="2" fill="#1a3a15" fillOpacity="0.15" opacity="0.65" />
+        <rect x="293" y="186" width="3" height="1" fill="#6b5a48" opacity="0.75" />
+        <rect x="294" y="191" width="1" height="3" fill="#5C8A4A" opacity="0.15" />
+        {/* Subtle glow */}
+        <rect x="255" y="192" width="45" height="3" fill="#3D6B4F" opacity="0.03" />
         </g>
 
         {/* ===== ENCHANTED SCEPTER (on shelf, leaning on trunk) ===== */}
